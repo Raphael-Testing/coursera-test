@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.chicken h2 { color: hotpink; }
+.beef h2 { color: crimson; }
+.sushi h2 { color: goldenrod; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    }
+    .card {
+    flex: 0 0 45%;
+    max-width: 45%;
+    }
+    .card:nth-child(3) {
+    flex-basis: 100%;
+    max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+    flex-basis: 100%;
+    max-width: 100%;
+    }
+}
