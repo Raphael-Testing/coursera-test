@@ -11,8 +11,10 @@ h1 {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -54,8 +56,8 @@ h1 {
 /* Tablet view: 768px - 991px */
 @media (min-width: 768px) and (max-width: 991px) {
   .card {
-    flex: 0 0 calc(50%-15px);
-    max-width: calc(50%-15px);
+    flex: 0 0 44%;
+    max-width: 44%;
   }
 
   .card:nth-child(3) {
