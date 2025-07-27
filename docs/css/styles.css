@@ -1,58 +1,75 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
-    flex: 1 1 300px;
-    max-width: 300px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: #ccc;
+  padding: 20px;
+  border: 1px solid #000;
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
-.card h2 {
-    margin-top: 0;
+/* Header tab styling */
+.card-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: lightgray;
 }
 
-.chicken h2 { color: hotpink; }
-.beef h2 { color: crimson; }
-.sushi h2 { color: goldenrod; }
+/* Specific tab colors */
+.chicken .card-header {
+  background-color: #f4bcbc;
+}
 
+.beef .card-header {
+  background-color: #d66;
+  color: white;
+}
+
+.sushi .card-header {
+  background-color: #f3e38d;
+}
+
+/* Tablet view: 768px - 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-    .container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    }
-    .card {
+  .card {
     flex: 0 0 45%;
     max-width: 45%;
-    }
-    .card:nth-child(3) {
+  }
+
+  .card:nth-child(3) {
     flex-basis: 100%;
     max-width: 100%;
-    }
+  }
 }
 
+/* Mobile view: <= 767px */
 @media (max-width: 767px) {
-    .card {
+  .card {
     flex-basis: 100%;
     max-width: 100%;
-    }
+  }
 }
