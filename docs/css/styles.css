@@ -56,8 +56,8 @@ h1 {
 /* Tablet view: 768px - 991px */
 @media (min-width: 768px) and (max-width: 991px) {
   .card {
-    flex: 0 0 43%;
-    max-width: 43%;
+    flex: 0 0 calc(50%-15px);
+    max-width: calc(50%-15px);
   }
 
   .card:nth-child(3) {
