@@ -205,3 +205,8 @@ __marimo__/
 
 # custom
 coursera-test.code-workspace
+node_modules
+package.json
+package-lock.json
+course 3
+docs_1

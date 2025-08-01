@@ -1,75 +1,60 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background: #fff;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  background: #ccc;
-  padding: 20px;
-  border: 1px solid #000;
-  position: relative;
-  flex: 1 1 300px;
-  max-width: 300px;
+* {
   box-sizing: border-box;
 }
 
-/* Header tab styling */
-.card-header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
-  font-weight: bold;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background-color: lightgray;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Specific tab colors */
-.chicken .card-header {
-  background-color: #f4bcbc;
-}
-
-.beef .card-header {
-  background-color: #d66;
+header {
+  background-color: #222;
   color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.sushi .card-header {
-  background-color: #f3e38d;
+.section-title {
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Tablet view: 768px - 991px */
+.menu-item {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.menu-item h3 {
+  margin-top: 0;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .menu-item {
+    float: left;
+    width: 30%;
+  }
+}
+
+/* Tablet: 2 columns */
 @media (min-width: 768px) and (max-width: 991px) {
-  .card {
-    flex: 0 0 44%;
-    max-width: 44%;
+  .menu-item {
+    float: left;
+    width: 47%;
   }
 
-  .card:nth-child(3) {
-    flex-basis: 100%;
-    max-width: 100%;
+  .menu-item:nth-child(3) {
+    clear: both;
+    width: 100%;
   }
 }
 
-/* Mobile view: <= 767px */
+/* Mobile: 1 column */
 @media (max-width: 767px) {
-  .card {
-    flex-basis: 100%;
-    max-width: 100%;
+  .menu-item {
+    width: 100%;
   }
 }
